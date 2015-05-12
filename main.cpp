@@ -9,8 +9,8 @@ using namespace fcv;
 
 int main(int argc, char** argv)
 {
-  //std::string filename("/home/ckovamees/src/opencv/opencv-3.0.0-rc1/samples/data/licenseplate_motion.jpg");
-  std::string filename("/home/ckovamees/src/opencv/opencv-3.0.0-rc1/samples/data/HappyFish.jpg");
+  //std::string filename("../data/licenseplate_motion.jpg");
+  std::string filename("../data/HappyFish.jpg");
   
   try {
     if (argc > 1)
