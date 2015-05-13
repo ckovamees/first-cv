@@ -1,3 +1,6 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x0e\x00F\x00i\x00r\x00s\x00t\x00C\x00V)
+
 [CMake]
 Build Directory Count=1
 Current Build Directory Index=0
@@ -9,7 +12,7 @@ Build Type=Debug
 CMake Binary=file:///usr/bin/cmake
 Environment Profile=
 Extra Arguments=
-Install Directory=
+Install Directory=file:///usr/local
 
 [Launch]
 Launch Configurations=Launch Configuration 0
@@ -22,15 +25,26 @@ Type=Native Application
 
 [Launch][Launch Configuration 0][Data]
 Arguments=
+Debugger Shell=
 Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
 Dependency Action=Build
+Display Demangle Names=true
+Display Static Members=false
 EnvironmentGroup=default
 Executable=file:///home/ckovamees/projects/first-cv/
 External Terminal=konsole --noclose --workdir %workdir -e %exe
+GDB Path=
 Project Target=FirstCV,FirstCV
+Remote GDB Config Script=
+Remote GDB Run Script=
+Remote GDB Shell Script=
+Start With=ApplicationOutput
 Use External Terminal=false
 Working Directory=
 isExecutable=false
 
 [Project]
 VersionControlSupport=kdevgit
+
+[SourceFileTemplates]
+LastUsedTemplate=/home/ckovamees/.kde/share/apps/kdevfiletemplates/template_descriptions/cpp_basic.desktop

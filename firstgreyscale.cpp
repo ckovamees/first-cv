@@ -1,4 +1,5 @@
 #include "firstgreyscale.h"
+#include "applicationexceptions.h"
 
 using namespace cv;
 using namespace std;
@@ -19,16 +20,18 @@ namespace fcv {
       image = imread(_filename);
       
       if (image.empty())
-      {
-	  cout << "Could not open image" << endl;         
-	  throw new Exception();
+      {	  
+	  throw IOException(_filename);
       }
-      
+            
       Mat grayImage;
       cvtColor(image, grayImage, COLOR_BGR2GRAY); 
       
-      namedWindow("Display Image", WINDOW_AUTOSIZE );
-      imshow("Display Image", grayImage);
+      namedWindow("Input Image", WINDOW_AUTOSIZE );
+      namedWindow("Converted Image", WINDOW_AUTOSIZE );
+      
+      imshow("Input  Image", image);
+      imshow("Converted Image", grayImage);
   }
   
 }

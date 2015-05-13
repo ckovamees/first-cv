@@ -1,4 +1,5 @@
 #include "renderimage.h"
+#include "applicationexceptions.h"
 
 using namespace std;
 using namespace cv;
@@ -20,9 +21,8 @@ namespace fcv {
       image = imread(_filename);
       
       if (image.empty())
-      {
-	  cout << "Could not open image" << endl;         
-	  throw new Exception();
+      {	  
+	  throw IOException(_filename);
       }
       
       namedWindow("Display Image", WINDOW_AUTOSIZE );
