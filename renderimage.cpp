@@ -6,7 +6,7 @@ using namespace cv;
 
 namespace fcv {
   
-  RenderImage::RenderImage(string filename):FirstCV(), _filename(filename)
+  RenderImage::RenderImage(string filename):BaseCV(), _filename(filename)
   {   
   }
 
