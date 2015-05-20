@@ -44,6 +44,28 @@ namespace fcv {
     std::string _filename;
   };
 
+  class VideoException : public Exception
+  {
+  public:    
+    VideoException():Exception() {}
+    VideoException(string url = nullptr):Exception("Could not open video."), _url(url) {}    
+    
+    virtual const char * what() 
+    {
+      ostringstream ss;
+      ss << Exception::what();
+      
+      if (! _url.empty())
+	ss << " " << _url;
+      
+      return ss.str().c_str();
+    }
+    
+  protected:
+    std::string _url;
+  };
+
+  
 }
 
 #endif // APPLICATIONEXCEPTION_H
