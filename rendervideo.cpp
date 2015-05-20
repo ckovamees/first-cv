@@ -31,9 +31,9 @@ namespace fcv {
       for (;;) {
 	Mat frame;
 	cap >> frame;
-// 	CVTCOLOR(FRAME, EDGES, COLOR_BGR2GRAY);
-// 	GAUSSIANBLUR(EDGES, EDGES, SIZE(7,7), 1.5, 1.5);
-// 	CANNY(EDGES, EDGES, 0, 30, 3);
+	cvtColor(frame, edges, COLOR_BGR2GRAY);
+	GaussianBlur(edges, edges, Size(7,7), 1.5, 1.5);
+	Canny(edges, edges, 0, 30, 3);
 //	imshow("edges", edges);
 	
 	imshow("edges", frame);
